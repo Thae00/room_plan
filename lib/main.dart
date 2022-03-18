@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:room_plan/widget/room_function.dart';
 
 import 'pages/home_page.dart';
-import 'testing/test_filter.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FilterChipDisplay(),
+      home: HomePage(),
     );
   }
 }

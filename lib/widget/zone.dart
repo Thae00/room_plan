@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:room_plan/utils/colors.dart';
 
 import 'filter_chip_widget.dart';
 import 'title_container.dart';
 
-class SpecialRequest extends StatefulWidget {
-  SpecialRequest({Key? key}) : super(key: key);
+class Zone extends StatefulWidget {
+  Zone({Key? key}) : super(key: key);
 
   @override
-  State<SpecialRequest> createState() => _SpecialRequestState();
+  State<Zone> createState() => _ZoneState();
 }
 
-class _SpecialRequestState extends State<SpecialRequest> {
+class _ZoneState extends State<Zone> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +20,7 @@ class _SpecialRequestState extends State<SpecialRequest> {
           alignment: Alignment.centerLeft,
           child: Padding(
               padding: EdgeInsets.all(8.0),
-              child: TitleContainer(myTitle: "Special Request Items")),
+              child: TitleContainer(myTitle: "Zone")),
         ),
         Padding(
           padding: EdgeInsets.only(left: 8.0),
@@ -32,9 +31,8 @@ class _SpecialRequestState extends State<SpecialRequest> {
                 spacing: 5.0,
                 runSpacing: 5.0,
                 children: <Widget>[
-                  filterChipWidget(chipName: 'Extra Bed'),
-                  filterChipWidget(chipName: 'Extra Breakfast'),
-                  filterChipWidget(chipName: 'Transportation'),
+                  filterChipWidget(chipName: 'A'),
+                  filterChipWidget(chipName: 'B'),
                 ],
               ),
             ),
