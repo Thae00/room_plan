@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:room_plan/controllers/home_controller.dart';
+import 'package:room_plan/testing/home_view.dart';
 import 'package:room_plan/widget/bed_type.dart';
 import 'package:room_plan/widget/bing.dart';
 import 'package:room_plan/widget/confirm_btn.dart';
@@ -11,6 +14,7 @@ import 'package:room_plan/widget/room_status.dart';
 import 'package:room_plan/widget/room_type.dart';
 import 'package:room_plan/widget/rooms.dart';
 import 'package:room_plan/widget/special_request.dart';
+import 'package:room_plan/widget/start_date.dart';
 import 'package:room_plan/widget/zone.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,6 +37,11 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              StartDate(),
+              //HomeView(),
+              SizedBox(
+                height: 5,
+              ),
               Bing(),
               SizedBox(
                 height: 5,
