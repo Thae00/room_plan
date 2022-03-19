@@ -18,7 +18,6 @@ class _filterChipWidgetState extends State<filterChipWidget> {
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
-            //spreadRadius: 0,
             blurRadius: 5,
             offset: Offset(3.0, 4.0),
           ),
@@ -29,7 +28,7 @@ class _filterChipWidgetState extends State<filterChipWidget> {
         label: Text(widget.chipName),
         labelStyle: TextStyle(
           color: _isSelected ? Colors.white : Color(0xff5B627C),
-          fontSize: 16.0,
+          fontSize: 18,
         ),
         selected: _isSelected,
         shadowColor: Colors.grey,

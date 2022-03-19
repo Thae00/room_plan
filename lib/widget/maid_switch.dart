@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MaidSwitch extends StatefulWidget {
@@ -24,21 +25,27 @@ class _MaidSwitchState extends State<MaidSwitch> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text("Maid in Room"),
-        Transform.scale(
-          scale: 1,
-          child: Switch(
-            onChanged: toggleSwitch,
-            value: isSwitched,
-            activeColor: Colors.white,
-            activeTrackColor: Colors.blue,
-            inactiveThumbColor: Colors.black.withOpacity(0.2),
-            inactiveTrackColor: Colors.grey,
+    return Container(
+      padding: EdgeInsets.only(left: 8.0),
+      child: Row(
+        children: [
+          Text(
+            "Maid in Room",
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
-        ),
-      ],
+          Transform.scale(
+            scale: 0.6,
+            child: CupertinoSwitch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: Colors.blue,
+              trackColor: Colors.black.withOpacity(0.2),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

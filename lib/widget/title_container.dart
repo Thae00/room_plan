@@ -9,7 +9,7 @@ class TitleContainer extends StatelessWidget {
     return Text(
       myTitle,
       style: TextStyle(
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w600,
         fontSize: 18,
       ),
     );
