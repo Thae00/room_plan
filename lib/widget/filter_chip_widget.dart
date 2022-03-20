@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:room_plan/constant.dart';
 
 class filterChipWidget extends StatefulWidget {
   final String chipName;
@@ -39,6 +40,9 @@ class _filterChipWidgetState extends State<filterChipWidget> {
         onSelected: (isSelected) {
           setState(() {
             _isSelected = isSelected;
+            list.add(widget.chipName);
+            // print(_isSelected);
+            // list.add(i);
           });
         },
         selectedColor: Colors.blue,

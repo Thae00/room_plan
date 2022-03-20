@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:room_plan/controllers/home_controller.dart';
-import 'package:room_plan/widget/room_function.dart';
 
 import 'pages/home_page.dart';
 
 void main() {
-  Get.put(HomeController());
+  //Get.put(HomeController());
   runApp(MyApp());
 }
 

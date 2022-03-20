@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:room_plan/constant.dart';
 
 class MaidSwitch extends StatefulWidget {
   MaidSwitch({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _MaidSwitchState extends State<MaidSwitch> {
     if (isSwitched == false) {
       setState(() {
         isSwitched = true;
+        result = isSwitched;
       });
     } else {
       setState(() {
