@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:room_plan/date/calender.dart';
+import 'package:room_plan/date/date_range.dart';
+import 'package:room_plan/date/triangle_paint_page.dart';
 import 'package:room_plan/widget/bed_type.dart';
 import 'package:room_plan/widget/bing.dart';
 import 'package:room_plan/widget/confirm_btn.dart';
@@ -36,67 +39,87 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           child: Form(
             key: formkey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Stack(
               children: [
-                DateRangePickerWidget(),
-                SizedBox(
-                  height: 5,
+                Positioned(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      DateRange(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      DateRangePickerWidget(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Bing(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Zone(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Floor(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      RoomType(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      RoomFunction(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      BedType(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Rooms(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      RoomStatus(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      MaidRoomStatus(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      MaidSwitch(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      SpecialRequest(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      ReservationType(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      ConfirmBtn(
+                        onTap: (() {
+                          print("Date is $date");
+                          print("Data is $list");
+                          print("Switch is $result");
+                        }),
+                      ),
+                    ],
+                  ),
                 ),
-                Bing(),
-                SizedBox(
-                  height: 5,
+                Positioned(
+                  top: 69,
+                  left: 30,
+                  child: CalendarWidget(),
                 ),
-                Zone(),
-                SizedBox(
-                  height: 5,
-                ),
-                Floor(),
-                SizedBox(
-                  height: 5,
-                ),
-                RoomType(),
-                SizedBox(
-                  height: 5,
-                ),
-                RoomFunction(),
-                SizedBox(
-                  height: 5,
-                ),
-                BedType(),
-                SizedBox(
-                  height: 5,
-                ),
-                Rooms(),
-                SizedBox(
-                  height: 5,
-                ),
-                RoomStatus(),
-                SizedBox(
-                  height: 5,
-                ),
-                MaidRoomStatus(),
-                SizedBox(
-                  height: 5,
-                ),
-                MaidSwitch(),
-                SizedBox(
-                  height: 5,
-                ),
-                SpecialRequest(),
-                SizedBox(
-                  height: 5,
-                ),
-                ReservationType(),
-                SizedBox(
-                  height: 5,
-                ),
-                ConfirmBtn(
-                  onTap: (() {
-                    print("Date is $date");
-                    print("Data is $list");
-                    print("Switch is $result");
-                  }),
+                Positioned(
+                  top: 60,
+                  left: 60,
+                  child: TrianglePaintPage(),
                 ),
               ],
             ),

@@ -1,31 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:room_plan/constant.dart';
 
-class DateRangePickerWidget extends StatefulWidget {
+class DateRange extends StatefulWidget {
   @override
-  _DateRangePickerWidgetState createState() => _DateRangePickerWidgetState();
+  _DateRangeState createState() => _DateRangeState();
 }
 
-class _DateRangePickerWidgetState extends State<DateRangePickerWidget> {
+class _DateRangeState extends State<DateRange> {
   final now = DateTime.now();
   DateTimeRange? dateRange;
 
-  // String getFrom() {
-  //   if (dateRange == null) {
-  //     return DateFormat('MM/dd/yyyy').format(now);
-  //   } else {
-  //     return DateFormat('MM/dd/yyyy').format(dateRange!.start);
-  //   }
-  // }
-
-  // String getUntil() {
-  //   if (dateRange == null) {
-  //     return DateFormat('MM/dd/yyyy').format(now);
-  //   } else {
-  //     return DateFormat('MM/dd/yyyy').format(dateRange!.end);
-  //   }
-  // }
+  bool showDate = false;
 
   String getDay() {
     if (dateRange == null) {
@@ -95,15 +80,7 @@ class _DateRangePickerWidgetState extends State<DateRangePickerWidget> {
   Widget build(BuildContext context) => Row(
         children: [
           ElevatedButton(
-            onPressed: () async {
-              final List<String?>? ans = await pickDateRange(context);
-              date.add(dateRange.toString());
-
-              // date.add(dateRange.toString());
-              // date.add("From ${getFullStart()} To ${UntilFullEnd()}");
-
-              // list.add(DateFormat('EEEE').format(dateRange!.end));
-              //list.add(dateRange.toString());
+            onPressed: () {
             },
             child: Container(
               padding: EdgeInsets.only(bottom: 5),
